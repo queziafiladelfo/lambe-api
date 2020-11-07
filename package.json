@@ -1,0 +1,8 @@
+{
+  "name": "lambe-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/queziafiladelfo/lambe-api.git",
+  "author": "quezia f. <queziafiladelfo@gmail.com>",
+  "license": "MIT"
+}
