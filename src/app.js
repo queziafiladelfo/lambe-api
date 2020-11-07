@@ -11,6 +11,7 @@ app.get('/',(request,response) => {
 });
 
 app.listen(8080, () => {
-  console.log(`API rodando na porta http://localhost:8080/`);
-  console.log('Pressione Ctrl+C para sair.');
+    console.log(`Projeto lambe-api`);
+    console.log(`API rodando na porta http://localhost:8080/`);
+    console.log('Pressione Ctrl+C para sair.');
 });
