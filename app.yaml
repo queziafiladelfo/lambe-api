@@ -1,0 +1,6 @@
+runtime: nodejs12
+
+env_variables:
+    DATABASE_USER:  'titan'
+    DATABASE_PASS: 'olimpo.' 
+    DATABASE_NAME: 'lambe'

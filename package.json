@@ -2,10 +2,14 @@
   "name": "lambe-api",
   "version": "1.0.0",
   "main": "src/app.js",
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "repository": "https://github.com/queziafiladelfo/lambe-api.git",
   "author": "quezia f. <queziafiladelfo@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "start": "node src/app.js",
     "dev": "nodemon src/app.js"
   },
   "dependencies": {
