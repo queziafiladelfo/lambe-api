@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const requireDir = require('require-dir');
 require('dotenv/config');
 
 const db_user = process.env.DATABASE_USER;
@@ -21,7 +22,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+requireDir('./models');
 app.use('/',require('./routes/main'));
+app.use('/create',require('./routes/create'));
 
 
 app.listen(8080, () => {
