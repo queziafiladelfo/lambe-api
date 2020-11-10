@@ -1,16 +1,16 @@
 const mongoose = require('mongoose');
-const User = mongoose.model('User');
+const Client = mongoose.model('Client');
 
 module.exports = {
     //Create
     async add(req,res){
-        const user = await User.create(req.body);
-        return res.json(user);
+        const clients = await Client.create(req.body);
+        return res.json(clients);
     },
     //Read
     async index(req,res) {
-        const users = await User.find();
-        return res.json(users);
+        const clients = await Client.find();
+        return res.json(clients);
     }
     //Update
     //Delete
@@ -19,13 +19,14 @@ module.exports = {
 /*
 User.create({
     name:"",
-    lastname:"",
+    nickname:"",
+    lastname: "",
     cpf: "",
     birthday: "",
+    avatar: "",
     facebook:"",
     instagram: "",
     email: "",
-    phone:"",
-    avatar:""
+    phone: ""
 });
 */
