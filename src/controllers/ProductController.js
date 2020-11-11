@@ -11,9 +11,18 @@ module.exports = {
     async index(req,res) {
         const products = await Product.find();
         return res.json(products);
-    }
+    },
+
     //Update
+    async update(req,res) {
+        const products = await Product.findByIdAndUpdate(req.params.id, req.body, {new: true});
+        return res.json(products);
+    },
     //Delete
+    async destroy(req,res){
+        await Product.findByIdAndRemove(req.params.id);
+        return res.send();
+    }
 }
 
 /*

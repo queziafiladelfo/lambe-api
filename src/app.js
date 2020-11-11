@@ -22,7 +22,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-requireDir('./src/models');
+requireDir('./models');
 app.use('/',require('./routes/main'));
 app.use('/create',require('./routes/create'));
 
