@@ -23,8 +23,10 @@ app.use(express.json());
 app.use(cors());
 
 requireDir('./models');
-app.use('/',require('./routes/main'));
-app.use('/create',require('./routes/create'));
+app.use('/',require('./routes/create'));
+app.use('/',require('./routes/read'));
+app.use('/',require('./routes/update'));
+app.use('/',require('./routes/delete'));
 
 
 app.listen(8080, () => {

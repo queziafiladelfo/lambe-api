@@ -1,0 +1,5 @@
+#Config
+#Fri Nov 20 16:18:18 BRT 2020
+cfg.location.x=0
+cfg.recentes=/home/cancio/Documentos/github/lambe-neo4j/bd1/logico.brM3;/home/cancio/Documentos/github/lambe-neo4j/bd1/conceitual.brM3;/home/cancio/Documentos/github/lambe-api/database/logico.brM3;/home/cancio/Documentos/github/lambe-api/database/conceitual.brM3
+cfg.location.y=0

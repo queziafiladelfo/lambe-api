@@ -3,12 +3,12 @@ const Client = mongoose.model('Client');
 
 module.exports = {
     //Create
-    async add(req,res){
+    async create(req,res){
         const clients = await Client.create(req.body);
         return res.json(clients);
     },
     //Read
-    async index(req,res) {
+    async read(req,res) {
         const clients = await Client.find();
         return res.json(clients);
     },
@@ -19,7 +19,7 @@ module.exports = {
     },
 
     //Delete
-    async destroy(req,res){
+    async delete(req,res){
         await Client.findByIdAndRemove(req.params.id);
         return res.send();
     }

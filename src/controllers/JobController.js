@@ -3,17 +3,16 @@ const Job = mongoose.model('Job');
 
 module.exports = {
     //Create
-    async add(req,res){
+    async create(req,res){
         const jobs = await Job.create(req.body);
         return res.json(jobs);
     },
 
     //Read
-    async index(req,res) {
+    async read(req,res) {
         const jobs = await Job.find();
         return res.json(jobs);
     },
-
      //Update
      async update(req,res) {
         const jobs = await Job.findByIdAndUpdate(req.params.id, req.body, {new: true});
@@ -21,7 +20,7 @@ module.exports = {
     },
 
     //Delete
-    async destroy(req,res){
+    async delete(req,res){
         await Job.findByIdAndRemove(req.params.id);
         return res.send();
     }

@@ -3,16 +3,15 @@ const User = mongoose.model('User');
 
 module.exports = {
     //Create
-    async add(req,res){
+    async create(req,res){
         const user = await User.create(req.body);
         return res.json(user);
     },
     //Read
-    async index(req,res) {
+    async read(req,res) {
         const users = await User.find();
         return res.json(users);
     },
-    
     //Update
     async update(req,res) {
         const users = await User.findByIdAndUpdate(req.params.id, req.body, {new: true});
@@ -20,7 +19,7 @@ module.exports = {
     },
 
     //Delete
-    async destroy(req,res){
+    async delete(req,res){
         await User.findByIdAndRemove(req.params.id);
         return res.send();
     }
